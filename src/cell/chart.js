@@ -14,7 +14,7 @@ function humanize(i){
 }
 
 function truncateLabel(value) {
-    if(value.length > 13){
+    if(value && value.length > 13){
       return value.substr(0, 10) + '...'
     }
     return value;
