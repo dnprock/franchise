@@ -10,7 +10,7 @@ import * as U from '../state/update'
 import { UnmountClosed } from 'react-collapse';
 
 const RETRY_INTERVAL = 1000;
-const BRIDGE_URL = 'ws://localhost:14645';
+const BRIDGE_URL = 'ws://dev.vidalab.co:14645';
 
 let clientConnectorSocket = null;
 let checkConnectorInterval;
