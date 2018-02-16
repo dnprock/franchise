@@ -8,6 +8,16 @@ import { getDB } from '../db/configure'
 
 export default function ExportButton(){
     return <span>
+        <div className="pt-button-group pt-large" style={{ float: 'right' }}>
+            <button type="button" className="pt-button" onClick={e => downloadNotebook(false) }>
+                <i className="fa fa-download" aria-hidden="true"></i> Download
+            </button>
+            <Popover position={Position.BOTTOM} content={<Menu>
+                <MenuItem iconName="unlock" text="Download with Credentials" onClick={e => downloadNotebook(true)} />
+            </Menu>}>
+                <button type="button" className="pt-button pt-icon-caret-down"></button>
+            </Popover>
+        </div>
     </span>
 }
 
